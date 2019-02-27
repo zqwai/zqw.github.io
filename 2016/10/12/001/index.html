@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>关于我 - 气味</title>
+    <title>Git 简单使用说明 - 气味</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
-    <meta name="description" content="一个设计爱好者的点滴记录,#关于我
-"> 
+    <meta name="description" content="一个设计爱好者的点滴记录,
+1、安装git： git官网需要安装git命令工具，根据电脑版本下载
+
+
+2、配置用户名：
+
+12git config --global user.name &#34;Your Name&#34;git conf,"> 
     <meta name="author" content="气味"> 
     <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -64,14 +69,13 @@
         </div>
         <div class="content markdown">
             <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a>、<a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo API</a>  <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="简化操作方法："><a href="#简化操作方法：" class="headerlink" title="简化操作方法："></a>简化操作方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n == hexo new            增加新文章</span><br><span class="line">$ hexo g == hexo generate    生成静态文件</span><br><span class="line">$ hexo s == hexo server         启动服务</span><br><span class="line">$ hexo d == hexo deploy        部署</span><br></pre></td></tr></table></figure>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="Hexo命令："><a href="#Hexo命令：" class="headerlink" title="Hexo命令："></a>Hexo命令：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo list &lt;<span class="built_in">type</span>&gt;        列出网站资料</span><br><span class="line">$ hexo version               显示Hexo版本号</span><br><span class="line">$ hexo clean                  清除缓存文件db.json和生成的静态文件public</span><br></pre></td></tr></table></figure>
+<p>###Hexo参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>布局（Layout）有三种默认布局：post, page, draft，可以自定义布局，自定义布局和post存储位置相同<br>post source/_posts<br>page source<br>draft source/_drafts<br>文件名称<br>默认以主题为文章名称，可以在配置文件中设置new_post_name 参数，改变默认的文件名称。<br>:title 标题，类似的内容还有 :year  :month : i_month(月份无前导0) :day :i_day</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -92,6 +96,10 @@
 
 
     </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简化操作方法："><span class="toc-number">1.</span> <span class="toc-text">简化操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-number">2.</span> <span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo命令："><span class="toc-number">3.</span> <span class="toc-text">Hexo命令：</span></a></li></ol>
+        </div>
     
 </div>
 
