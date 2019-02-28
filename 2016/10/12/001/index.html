@@ -10,13 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
-    <meta name="description" content="一个设计爱好者的点滴记录,
-1、安装git： git官网需要安装git命令工具，根据电脑版本下载
-
-
-2、配置用户名：
-
-12git config --global user.name &#34;Your Name&#34;git conf,"> 
+    <meta name="description" content="一个设计爱好者的点滴记录,安装git： git官网需要安装git命令工具，根据电脑版本下载
+配置用户名：12git config --global user.name &#34;Your Name&#34;git config --glob,"> 
     <meta name="author" content="气味"> 
     <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -69,6 +64,7 @@
         </div>
         <div class="content markdown">
             <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a>、<a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo API</a>  <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Commands:</span><br><span class="line">  clean     Remove generated files and cache.</span><br><span class="line">  config    Get or set configurations.</span><br><span class="line">  deploy    Deploy your website.</span><br><span class="line">  generate  Generate static files.</span><br><span class="line">  help      Get help on a command.</span><br><span class="line">  init      Create a new Hexo folder.</span><br><span class="line">  list      List the information of the site</span><br><span class="line">  migrate   Migrate your site from other system to Hexo.</span><br><span class="line">  new       Create a new post.</span><br><span class="line">  publish   Moves a draft post from _drafts to _posts folder.</span><br><span class="line">  render    Render files with renderer plugins.</span><br><span class="line">  server    Start the server.</span><br><span class="line">  version   Display version information.</span><br><span class="line"></span><br><span class="line">Global Options:</span><br><span class="line">  --config  Specify config file instead of using _config.yml</span><br><span class="line">  --cwd     Specify the CWD</span><br><span class="line">  --debug   Display all verbose messages in the terminal</span><br><span class="line">  --draft   Display draft posts</span><br><span class="line">  --safe    Disable all plugins and scripts</span><br><span class="line">  --silent  Hide output on console</span><br></pre></td></tr></table></figure>
 <h3 id="简化操作方法："><a href="#简化操作方法：" class="headerlink" title="简化操作方法："></a>简化操作方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n == hexo new            增加新文章</span><br><span class="line">$ hexo g == hexo generate    生成静态文件</span><br><span class="line">$ hexo s == hexo server         启动服务</span><br><span class="line">$ hexo d == hexo deploy        部署</span><br></pre></td></tr></table></figure>
 <h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 <p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
@@ -98,7 +94,7 @@
     </div>
     
         <div class="side">
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简化操作方法："><span class="toc-number">1.</span> <span class="toc-text">简化操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-number">2.</span> <span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo命令："><span class="toc-number">3.</span> <span class="toc-text">Hexo命令：</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简化操作方法："><span class="toc-number">2.</span> <span class="toc-text">简化操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-number">3.</span> <span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo命令："><span class="toc-number">4.</span> <span class="toc-text">Hexo命令：</span></a></li></ol>
         </div>
     
 </div>
