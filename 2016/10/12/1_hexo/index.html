@@ -10,20 +10,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
-    <meta name="description" content="一个设计爱好者的点滴记录,你终于来了，我是气味，专注设计、前端开发，健身旅行，关注新技术，
+    <meta name="description" content="一个设计爱好者的点滴记录,
+自述你终于来了，我是气味，专注设计、前端开发，健身旅行，关注新技术，
 "> 
     <meta name="author" content="气味"> 
     <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="/css/diaspora.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8691406134231910",
-              enable_page_level_ads: true
-         });
-    </script>
+
     <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
     </script>
 </head>
@@ -69,9 +64,12 @@
 <h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 <p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 <h3 id="Hexo命令："><a href="#Hexo命令：" class="headerlink" title="Hexo命令："></a>Hexo命令：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo list &lt;<span class="built_in">type</span>&gt;        列出网站资料</span><br><span class="line">$ hexo version               显示Hexo版本号</span><br><span class="line">$ hexo clean                  清除缓存文件db.json和生成的静态文件public</span><br></pre></td></tr></table></figure>
-<p>###Hexo参数：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Hexo参数："><a href="#Hexo参数：" class="headerlink" title="Hexo参数："></a>Hexo参数：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 <p>布局（Layout）有三种默认布局：post, page, draft，可以自定义布局，自定义布局和post存储位置相同<br>post source/_posts<br>page source<br>draft source/_drafts<br>文件名称<br>默认以主题为文章名称，可以在配置文件中设置new_post_name 参数，改变默认的文件名称。<br>:title 标题，类似的内容还有 :year  :month : i_month(月份无前导0) :day :i_day</p>
+<h3 id="模版开发"><a href="#模版开发" class="headerlink" title="模版开发"></a>模版开发</h3><h4 id="EJS"><a href="#EJS" class="headerlink" title="EJS"></a>EJS</h4><p><a href="https://ejs.bootcss.com/" target="_blank" rel="noopener">EJS</a> 模板语言 （effective【高效】JavaScript）</p>
+<h5 id="标签含义"><a href="#标签含义" class="headerlink" title="标签含义"></a>标签含义</h5><p>&lt;% ‘脚本’ 标签，用于流程控制，无输出。<br>&lt;%_ 删除其前面的空格符<br>&lt;%= 输出数据到模板（输出是转义 HTML 标签）<br>&lt;%- 输出非转义的数据到模板<br>&lt;%# 注释标签，不执行、不输出内容<br>&lt;%% 输出字符串 ‘&lt;%’<br>%&gt; 一般结束标签<br>-%&gt; 删除紧随其后的换行符<br>_%&gt; 将结束标签后面的空格符删除</p>
+<h4 id="包含（include）"><a href="#包含（include）" class="headerlink" title="包含（include）"></a>包含（include）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- include(<span class="string">'user/show'</span>, &#123;user: user&#125;); %&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="YML"><a href="#YML" class="headerlink" title="YML"></a>YML</h4><p>YML 文件格式是YAML (YAML Aint Markup Language)编写的文件格式，YAML是一种直观的能够被电脑识别的的数据数据序列化格式，并且容易被人类阅读，容易和脚本语言交互的，可以被支持YAML库的不同的编程语言程序导入，比如： C/C++, Ruby, Python, Java, Perl, C#, PHP等。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -94,7 +92,7 @@
     </div>
     
         <div class="side">
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简化操作方法："><span class="toc-number">2.</span> <span class="toc-text">简化操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-number">3.</span> <span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo命令："><span class="toc-number">4.</span> <span class="toc-text">Hexo命令：</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简化操作方法："><span class="toc-number">2.</span> <span class="toc-text">简化操作方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-number">3.</span> <span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo命令："><span class="toc-number">4.</span> <span class="toc-text">Hexo命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo参数："><span class="toc-number">5.</span> <span class="toc-text">Hexo参数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模版开发"><span class="toc-number">6.</span> <span class="toc-text">模版开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#EJS"><span class="toc-number">6.1.</span> <span class="toc-text">EJS</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#标签含义"><span class="toc-number">6.1.1.</span> <span class="toc-text">标签含义</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包含（include）"><span class="toc-number">6.2.</span> <span class="toc-text">包含（include）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#YML"><span class="toc-number">6.3.</span> <span class="toc-text">YML</span></a></li></ol></li></ol>
         </div>
     
 </div>
@@ -161,6 +159,18 @@
 </div>
 
 
+
+<!-- baidu Analytics -->
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End baidu Analytics -->
 
 
 </html>
