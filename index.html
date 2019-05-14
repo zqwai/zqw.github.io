@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>关于我 - 气味</title>
+    <title>气味 - 品味生活 享受设计</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
-    <meta name="description" content="一个设计爱好者的点滴记录,
-自述你终于来了，我是气味，专注设计、前端开发，健身旅行，关注新技术，
-"> 
+    <meta name="description" content="一个设计爱好者的点滴记录,"> 
     <meta name="author" content="气味"> 
     <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="/css/diaspora.css">
-
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
 </head>
 </html>
 <body class="loading">
@@ -30,27 +25,27 @@
     <ul id="menu-menu" class="menu">
         
         <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="About" target="_blank" rel="noopener">About</a>
+            <a href="/about/" title="介绍" target="_blank" rel="noopener">介绍</a>
         </li>
         
         <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="Archives" target="_blank" rel="noopener">Archives</a>
+            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
         </li>
         
         <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="Tags" target="_blank" rel="noopener">Tags</a>
+            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="标签云" target="_blank" rel="noopener">标签云</a>
         </li>
         
     </ul>
     <p id="copyright">
-        &copy;
-        2019
-        <a href="http://zqwai.com/" target="_blank">气味</a>
-        <a href="https://github.com/zqwai/" target="_blank">Github</a>
-        <span style="display:none">
-          Powered by <a href="http://zqwai.com/" title="气味" target="_blank" rel="noopener">气味</a>
-        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
-        by Fechin</span>
+        &copy; 2019 气味.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        <!-- Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
+        by Fechin -->
     </p>
 </div>
 
@@ -59,7 +54,7 @@
 <div id="screen">
     <div id="mark">
         <div class="layer" data-depth="0.4">
-            <img src="/img/article/cover15.gif" id="cover" crossorigin="anonymous" width="1920" height="1080">
+            <img src="/img/article/cover05.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
         </div>
     </div>
     <div id="vibrant">
@@ -76,18 +71,43 @@
     </div>
     
     <div id="post0">
-        <p>四月 04, 2019</p>
-        <h2><a href="/2019/04/04/7-monodb/" title="monodb 笔记" class="posttitle">monodb 笔记</a></h2>
-        <p class="summary">monodb docs
-monodb server常用插件：
-body-parser     解析中间件
-cors...</p>
+        <p>四月 22, 2019</p>
+        <h2><a href="/2019/04/22/9-es6/" title="es6 简介" class="posttitle">es6 简介</a></h2>
+        <p class="summary">默认参数12345678// oldvar link = function(height, color, url)...</p>
     </div>
     
 </div>
 
     <div id="primary">
         
+<div class="post">
+    <a href="/2019/04/21/8-express/" title="Express 速查表">
+        <img src="/img/article/cover16.jpg" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>四月 21, 2019</p>
+        <h3><a href="/2019/04/21/8-express/" title="Express 速查表" class="posttitle">Express 速查表</a></h3>
+        <p>Express 安装123$ sudo npm install express            本地安装$ sudo npm install exp...</p>
+    </div>
+</div>
+
+
+<div class="post">
+    <a href="/2019/04/04/7-monodb/" title="mongodb 笔记">
+        <img src="/img/article/cover15.gif" class="cover" width="680" height="440">
+    </a>
+    <div class="else">
+        <p>四月 04, 2019</p>
+        <h3><a href="/2019/04/04/7-monodb/" title="mongodb 笔记" class="posttitle">mongodb 笔记</a></h3>
+        <p>mongodb docs 
+搭建MongoDB server [Mac]
+下载 MongoDB
+
+12$ cd Downloads$ curl -O ht...</p>
+    </div>
+</div>
+
+
 <div class="post">
     <a href="/2019/04/01/7-vue/" title="从源码中学习 Vue">
         <img src="/img/article/cover14.jpg" class="cover" width="680" height="440">
@@ -256,17 +276,16 @@ gulp.task(name, fn) – 定义任务，第一个参数是任务名，第二个�
 
 
 
-<!-- baidu Analytics -->
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End baidu Analytics -->
-
-
+  <!-- baidu Analytics -->
+  <script type="text/javascript">
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- End baidu Analytics -->
+  
 </html>

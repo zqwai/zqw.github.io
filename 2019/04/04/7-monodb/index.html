@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>关于我 - 气味</title>
+    <title>mongodb 笔记 - 气味</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
-    <meta name="description" content="一个设计爱好者的点滴记录,
-自述你终于来了，我是气味，专注设计、前端开发，健身旅行，关注新技术，
-"> 
+    <meta name="description" content="一个设计爱好者的点滴记录,mongodb docs 
+搭建MongoDB server [Mac]
+下载 MongoDB
+
+12$ cd Downloads$ curl -O https://fastdl.mongodb.o,"> 
     <meta name="author" content="气味"> 
     <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="/css/diaspora.css">
-
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
 </head>
 </html>
 <body class="loading">
@@ -31,7 +30,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">monodb 笔记</h3>
+    <h3 class="subtitle">mongodb 笔记</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -49,17 +48,78 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">monodb 笔记</h1>
+        <h1 class="title">mongodb 笔记</h1>
         <div class="stuff">
             <span>四月 04, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/monodb/">monodb</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank" rel="noopener">monodb docs</a></p>
-<h1 id="monodb-server"><a href="#monodb-server" class="headerlink" title="monodb server"></a>monodb server</h1><h2 id="常用插件："><a href="#常用插件：" class="headerlink" title="常用插件："></a>常用插件：</h2><ul>
+            <p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank" rel="noopener">mongodb docs</a> </p>
+<h1 id="搭建MongoDB-server-Mac"><a href="#搭建MongoDB-server-Mac" class="headerlink" title="搭建MongoDB server [Mac]"></a>搭建MongoDB server [Mac]</h1><ol>
+<li>下载 MongoDB</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Downloads</span><br><span class="line">$ curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.0.6.tgz</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>提取文档</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf mongodb-osx-x86_64–3.0.6.tgz</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>移动到指定路径</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv mongodb-osx-x86_64–3.0.6 /usr/<span class="built_in">local</span>/mongodb</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>创建数据库文件夹</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mkdir -p /data/db</span><br><span class="line">$ whoami</span><br><span class="line">myusername</span><br><span class="line">$ sudo chown myusername /data/db</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>添加 Mongo 环境变量</li>
+</ol>
+<blockquote>
+<p>首页切换用户路径并查看路径</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/Users/myusername</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>然后创建.bash_profile文件. 如果有.bash_profile则不需要创建</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al                      // 查看所有文件</span><br><span class="line">$ touch .bash_profile         //创建文件</span><br><span class="line">$ vim .bash_profile           //进入vim 编辑模式</span><br><span class="line">$ open -e .bash_profile       //打开记事本 编辑</span><br><span class="line">$ <span class="built_in">source</span> .bash_profile        //更新文件</span><br></pre></td></tr></table></figure>
+<p>将下面的的配置插入到 .bash_profile</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MONGO_PATH=/usr/local/mongodb</span><br><span class="line">export PATH=$PATH:$MONGO_PATH/bin</span><br></pre></td></tr></table></figure>
+<p>注：如果启用vim编辑模式，可以按“esc”退出编辑模式，或者按“:wq” 保存退出编辑模式。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mongo -version                    //查看mongodb版本</span><br><span class="line">MongoDB shell version: X.X.X</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>启动mongodb</p>
+</blockquote>
+<p>先打开两个终端面板，默认地址及端口：127.0.0.1:27017</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mongod    <span class="comment">#启动MongoDB服务</span></span><br><span class="line">$ mongo     <span class="comment">#打开MongoDB控制台 (默认连接本地服务器)</span></span><br></pre></td></tr></table></figure>
+<h1 id="完全卸载MongoDB（MACOS）"><a href="#完全卸载MongoDB（MACOS）" class="headerlink" title="完全卸载MongoDB（MACOS）"></a>完全卸载MongoDB（MACOS）</h1><ol>
+<li>检查是否有任何mongodb服务正在运行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl list | grep mongo</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>从LaunchAgent卸载</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist</span><br><span class="line">rm -f ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist</span><br><span class="line">launchctl remove homebrew.mxcl.mongodb</span><br></pre></td></tr></table></figure>
+<ol>
+<li>关闭所有mongodb的进程</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -f mongod</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>卸载 mongodb</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过 homebrew 卸载</span></span><br><span class="line">brew uninstall mongodb  </span><br><span class="line"><span class="comment"># 手动安装，删除mongodb文件夹即可</span></span><br><span class="line">rm -rf &lt;mongodb_folder&gt;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>重新确认mongo相关文件是否仍然存在</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -al /usr/<span class="built_in">local</span>/bin/mong*</span><br><span class="line">ls -al ~/Library/LaunchAgents</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>删除db文件夹</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除database </span></span><br><span class="line">rm -rf /usr/<span class="built_in">local</span>/var/mongodb     //默认地址</span><br><span class="line">rm -rf /data/db                   //自定义地址</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除'mongodb.log'.</span></span><br><span class="line">rm -rf /usr/<span class="built_in">local</span>/var/<span class="built_in">log</span>/</span><br></pre></td></tr></table></figure>
+<h1 id="mongoDB-安全配置"><a href="#mongoDB-安全配置" class="headerlink" title="mongoDB 安全配置"></a>mongoDB 安全配置</h1><h2 id="密码配置"><a href="#密码配置" class="headerlink" title="密码配置"></a>密码配置</h2><h1 id="mongoDB-控制台"><a href="#mongoDB-控制台" class="headerlink" title="mongoDB 控制台"></a>mongoDB 控制台</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示服务器上的数据库列表</span></span><br><span class="line">show dbs</span><br><span class="line"><span class="comment"># 选择数据库</span></span><br><span class="line">use DB_NAME</span><br><span class="line"><span class="comment"># 显示所选数据库中的集合</span></span><br><span class="line">show collections</span><br><span class="line"><span class="comment"># 查询对应集合的所有项目</span></span><br><span class="line">db.COLLECTION_NAME.find()</span><br><span class="line"><span class="comment"># 指定对象id 查询</span></span><br><span class="line">db.COLLECTION_NAME.find(<span class="string">"id"</span>, ObiectId(<span class="string">"IDNAME"</span>))</span><br><span class="line"><span class="comment"># 匹配查询</span></span><br><span class="line">db.COLLECTION_NAME.find((<span class="string">"email"</span>: /gmail/))</span><br><span class="line"><span class="comment"># 更新对象</span></span><br><span class="line">db.COLLECTION_NAME.update(QUERY_OBJECT, SET_OBJECT)</span><br><span class="line"><span class="comment"># 删除对象</span></span><br><span class="line">db.COLLECTION_NAME.remove(QUERY_OBJECT)</span><br><span class="line"><span class="comment"># 插入对象</span></span><br><span class="line">db.COLLECTION_NAME.insert(OBJECT)</span><br></pre></td></tr></table></figure>
+<h1 id="mongodb-常用插件："><a href="#mongodb-常用插件：" class="headerlink" title="mongodb 常用插件："></a>mongodb 常用插件：</h1><ul>
 <li>body-parser     解析中间件</li>
 <li>cors           （Cross-Origin Resource Sharing）跨源资源共享</li>
 <li>morgan          是express默认的日志中间件</li>
@@ -69,80 +129,29 @@
 </li>
 <li>Mongoose        在异步环境下对mongodb进行便捷操作的对象模型工具</li>
 </ul>
-<h2 id="UI管理软件"><a href="#UI管理软件" class="headerlink" title="UI管理软件"></a>UI管理软件</h2><ul>
+<h1 id="UI管理软件"><a href="#UI管理软件" class="headerlink" title="UI管理软件"></a>UI管理软件</h1><ul>
 <li>postman</li>
 <li>mongodb-compass</li>
 </ul>
-<h2 id="Install-MongoDB-Mac-by-terminal"><a href="#Install-MongoDB-Mac-by-terminal" class="headerlink" title="Install MongoDB Mac by terminal"></a>Install MongoDB Mac by terminal</h2><ol>
-<li>Download MongoDB</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Downloads</span><br><span class="line">$ curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.0.6.tgz</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Extract downloaded archive</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf mongodb-osx-x86_64–3.0.6.tgz</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Move binaries to local user</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv mongodb-osx-x86_64–3.0.6 /usr/<span class="built_in">local</span>/mongodb</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Choosing the file data storage</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mkdir -p /data/db</span><br><span class="line">$ whoami</span><br><span class="line">myusername</span><br><span class="line">$ sudo chown myusername /data/db</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>Adding Mongo to Environment Variables</li>
-</ol>
-<blockquote>
-<p>First certify you are in the user directory.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/Users/myusername</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Then create the bash_profile file.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch .bash_profile</span><br><span class="line">$ vim .bash_profile</span><br></pre></td></tr></table></figure>
-<p>Now you are in the vim shell mode. By default it should be in the — INSERT — mode on, if not just type “i”.</p>
-<p>Now write the commands below:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MONGO_PATH=/usr/local/mongodb</span><br><span class="line">export PATH=$PATH:$MONGO_PATH/bin</span><br></pre></td></tr></table></figure>
-<p>Press esc to exit the INSERT MODE, then you should enter :wq which means write and quite vim mode. After this you just have updated the PATH, restart your Terminal and type:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> .bash_profile</span><br><span class="line">$ mongo -version</span><br><span class="line">MongoDB shell version: X.X.X</span><br></pre></td></tr></table></figure>
-<p>If you did it correctly then you should have now the version of the MongoDB installed as the output.</p>
-<blockquote>
-<p>Trying to access the DB<br>Open two terminals windows.</p>
-</blockquote>
-<p>In the first you will open the server which will listen the requisitions (normally at port 27017):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod</span><br></pre></td></tr></table></figure>
-<p>On the other terminal type the next command that will open the Mongo Shell version and you can play around it now.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongos</span><br></pre></td></tr></table></figure>
-<p>For example, you can take a look over your databases.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; show dbs</span><br></pre></td></tr></table></figure>
-<h2 id="Uninstall-MongoDB-MACOS-completely"><a href="#Uninstall-MongoDB-MACOS-completely" class="headerlink" title="Uninstall MongoDB (MACOS) completely"></a>Uninstall MongoDB (MACOS) completely</h2><ol>
-<li>Check to see if any mongo service is running</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl list | grep mongo</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Unload from LaunchAgents</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist</span><br><span class="line">rm -f ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist</span><br><span class="line">launchctl remove homebrew.mxcl.mongodb</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Kill all the processes related to mongod</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -f mongod</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Uninstall the mongodb</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If installed via brew</span></span><br><span class="line">brew uninstall mongodb  </span><br><span class="line"><span class="comment"># If installed manually you can simply delete the folder</span></span><br><span class="line">rm -rf &lt;mongodb_folder&gt;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>Re-confirming if mongo related file still exists</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -al /usr/<span class="built_in">local</span>/bin/mong*</span><br><span class="line">ls -al ~/Library/LaunchAgents</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>If you have separate folder for db</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># database </span></span><br><span class="line">rm -rf /usr/<span class="built_in">local</span>/var/mongodb</span><br><span class="line">rm -rf /data/db</span><br><span class="line"></span><br><span class="line"><span class="comment"># log  Make sure just have 'mongodb.log'.</span></span><br><span class="line">rm -rf /usr/<span class="built_in">local</span>/var/<span class="built_in">log</span>/</span><br></pre></td></tr></table></figure>
-<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><ol>
+<h1 id="Mongoose"><a href="#Mongoose" class="headerlink" title="Mongoose"></a>Mongoose</h1><h2 id="Mongoose-基本使用方法"><a href="#Mongoose-基本使用方法" class="headerlink" title="Mongoose 基本使用方法"></a>Mongoose 基本使用方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">const</span> dbUri = <span class="string">'mongodb://localhost:27017/api'</span>;</span><br><span class="line"><span class="keyword">const</span> dbConnection = mongoose.createConnection(dbUri);</span><br><span class="line"><span class="keyword">const</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="keyword">let</span> postSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">  title: <span class="built_in">String</span>,</span><br><span class="line">  text: <span class="built_in">String</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> Post = dbConnection.model(<span class="string">'Post'</span>, postSchema, <span class="string">'posts'</span>);</span><br><span class="line">Post.find(&#123;&#125;, (err, posts) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(posts);</span><br><span class="line">  process.exit(<span class="number">1</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Mongoose-Schema"><a href="#Mongoose-Schema" class="headerlink" title="Mongoose Schema"></a>Mongoose Schema</h2><ul>
+<li>Sing</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>Date</li>
+<li>Array</li>
+<li>Buffer</li>
+<li>Schema.Tyeps.Mixed</li>
+<li>Schema.Tyeps.ObjectId</li>
+</ul>
+<h2 id="Mongoose-CRUD-创建-读取-更新-删除"><a href="#Mongoose-CRUD-创建-读取-更新-删除" class="headerlink" title="Mongoose CRUD 创建|读取|更新|删除"></a>Mongoose CRUD 创建|读取|更新|删除</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> post = <span class="keyword">new</span> Post(&#123;<span class="attr">title</span>: <span class="string">'a'</span>, <span class="attr">text</span>: <span class="string">'b'</span>&#125;);</span><br><span class="line"><span class="comment">// create</span></span><br><span class="line">post.save(<span class="function">(<span class="params">error, <span class="built_in">document</span></span>) =&gt;</span> &#123; ... &#125;);</span><br><span class="line"><span class="comment">// read</span></span><br><span class="line">post.fineOne(criteria, (error, post) =&gt; &#123; ... &#125;);</span><br><span class="line"><span class="comment">// update</span></span><br><span class="line">post.fineOne(criteria, (error, post) =&gt; &#123; </span><br><span class="line">  post.set()</span><br><span class="line">  post.save(<span class="function">(<span class="params">error, <span class="built_in">document</span></span>) =&gt;</span> &#123; ... &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// delete</span></span><br><span class="line">post.fineOne(criteria, (error, post) =&gt; &#123; </span><br><span class="line">  post.remove(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123; ... &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Mongoose-模型方法"><a href="#Mongoose-模型方法" class="headerlink" title="Mongoose 模型方法"></a>Mongoose 模型方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查找文档</span></span><br><span class="line">find(criteria, [fields], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 返回匹配条件的文档数目，</span></span><br><span class="line">count(criteria, (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过id查询，返回对应文档</span></span><br><span class="line">findById(id, [fields], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 通过id查询，更新对应文档</span></span><br><span class="line">findByIdAndUpdate(id, [update], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 通过id查询，删除对应文档</span></span><br><span class="line">findByIdAndRemove(id, [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回单个文档</span></span><br><span class="line">findOne(criteria, [fields], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 执行findAndModify(), 以更新对应文档</span></span><br><span class="line">findOneAndUpdate(criteria, [update], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 执行findAndModify(), 以删除对应文档</span></span><br><span class="line">findOneAndRemove(id, [update], [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 更新文档</span></span><br><span class="line">update(criteria, update, [option], (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 创建一个文档对象，并保存到数据库中</span></span><br><span class="line">create(doc(s), (error, documents) =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// 删除文档</span></span><br><span class="line">remove(criteria, (error, documents) =&gt; &#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Mongoose-文档方法"><a href="#Mongoose-文档方法" class="headerlink" title="Mongoose 文档方法"></a>Mongoose 文档方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 保存文档</span></span><br><span class="line">save(<span class="function">(<span class="params">error, doc, count</span>) =&gt;</span> &#123;&#125;);</span><br><span class="line"><span class="comment">// 在文档的属性上设置一个值</span></span><br><span class="line"><span class="keyword">set</span>(path, val, [type], [option]);</span><br><span class="line">// 获取属性的值</span><br><span class="line"><span class="keyword">get</span>(path, [type]);</span><br><span class="line">// 获取属性是否有更改</span><br><span class="line">isModfied([path]);</span><br><span class="line">// 检查属性是否有更改</span><br><span class="line">populate([path],[callback]);</span><br><span class="line">// 从文档中获取json格式数据</span><br><span class="line">toJSON([path],[callback]);</span><br><span class="line">// 验证文档</span><br><span class="line">validate([path],[callback]);</span><br></pre></td></tr></table></figure>
+<h1 id="常见的error及解决方-整理中"><a href="#常见的error及解决方-整理中" class="headerlink" title="常见的error及解决方[整理中]"></a>常见的error及解决方[整理中]</h1><ol>
 <li>Failed to set up listener: SocketException: Address already in use</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -iTCP -sTCP:LISTEN -n -P</span><br><span class="line"></span><br><span class="line">sudo <span class="built_in">kill</span> &lt;mongo_command_pid&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -iTCP -sTCP:LISTEN -n -P</span><br><span class="line">sudo <span class="built_in">kill</span> &lt;mongo_command_pid&gt;</span><br></pre></td></tr></table></figure>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src>
@@ -162,10 +171,6 @@
 
 
     </div>
-    
-        <div class="side">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#monodb-server"><span class="toc-number">1.</span> <span class="toc-text">monodb server</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件："><span class="toc-number">1.1.</span> <span class="toc-text">常用插件：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI管理软件"><span class="toc-number">1.2.</span> <span class="toc-text">UI管理软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-MongoDB-Mac-by-terminal"><span class="toc-number">1.3.</span> <span class="toc-text">Install MongoDB Mac by terminal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Uninstall-MongoDB-MACOS-completely"><span class="toc-number">1.4.</span> <span class="toc-text">Uninstall MongoDB (MACOS) completely</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error"><span class="toc-number">1.5.</span> <span class="toc-text">error</span></a></li></ol></li></ol>
-        </div>
     
 </div>
 
@@ -232,17 +237,16 @@
 
 
 
-<!-- baidu Analytics -->
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End baidu Analytics -->
-
-
+  <!-- baidu Analytics -->
+  <script type="text/javascript">
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- End baidu Analytics -->
+  
 </html>

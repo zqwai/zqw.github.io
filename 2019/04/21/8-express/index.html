@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Express 速查表 - 气味</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="js css3 nodejs webpack gulp grunt vue react 设计,"> 
+    <meta name="description" content="一个设计爱好者的点滴记录,Express 安装123$ sudo npm install express            本地安装$ sudo npm install express@4.2.0      指定版本$ ,"> 
+    <meta name="author" content="气味"> 
+    <link rel="alternative" href="atom.xml" title="气味" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">气味</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">Express 速查表</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">Express 速查表</h1>
+        <div class="stuff">
+            <span>四月 21, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Express/">Express</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Express-安装"><a href="#Express-安装" class="headerlink" title="Express 安装"></a>Express 安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install express            本地安装</span><br><span class="line">$ sudo npm install express@4.2.0      指定版本</span><br><span class="line">$ sudo npm install -g express@4.2.0   全局安装</span><br></pre></td></tr></table></figure>
+<h1 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h1><ul>
+<li>用法</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express [options] [dir]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>选项</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-h      输出帮助信息</span><br><span class="line">-V      版本号</span><br><span class="line">-e      添加ejs模版引擎支持，默认jade</span><br><span class="line">-H      添加hogan.js模版引擎支持</span><br><span class="line">-c      &lt;library&gt;:添加对&lt;library&gt;(less|stylus|compass)的支持</span><br><span class="line">-f      强制在非空目录中执行</span><br></pre></td></tr></table></figure>
+<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)      <span class="comment">//包含一个模版</span></span><br><span class="line"><span class="keyword">var</span> app = express()                   <span class="comment">//创建express实例</span></span><br><span class="line">app.listen(protNumber,callback);      <span class="comment">//启动express服务器</span></span><br><span class="line">http.createServer(app).listen(protNumber, callback)   <span class="comment">//启动express服务器</span></span><br><span class="line">app.set(key, value)                   <span class="comment">//通过key 设置属性值</span></span><br><span class="line">app.get(key)                          <span class="comment">//通过key 获取属性值</span></span><br></pre></td></tr></table></figure>
+<h1 id="Http方法和路由"><a href="#Http方法和路由" class="headerlink" title="Http方法和路由"></a>Http方法和路由</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app.get(urlPattern, requestHandler[requestHandler, ...]);       <span class="comment">//处理GET方法请求</span></span><br><span class="line">app.post(urlPattern, requestHandler[requestHandler, ...]);      <span class="comment">//处理POST方法请求</span></span><br><span class="line">app.put(urlPattern, requestHandler[requestHandler, ...]);       <span class="comment">//处理PUT方法请求</span></span><br><span class="line">app.delete(urlPattern, requestHandler[requestHandler, ...]);    <span class="comment">//处理DELETE方法请求</span></span><br><span class="line">app.all(urlPattern, requestHandler[requestHandler, ...]);    <span class="comment">//处理所有方法请求</span></span><br><span class="line">app.param(name, callback]);    <span class="comment">//处理URL参数</span></span><br><span class="line">app.use(urlPattern, requestHandler[requestHandler, ...]]);    <span class="comment">//应用中间间</span></span><br></pre></td></tr></table></figure>
+<h1 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.params        <span class="comment">//请求参数</span></span><br><span class="line"><span class="built_in">require</span>.param         <span class="comment">//提取一个参数</span></span><br><span class="line"><span class="built_in">require</span>.query         <span class="comment">//提取查询字符串参数</span></span><br><span class="line"><span class="built_in">require</span>.route         <span class="comment">//返回一个路由字符串</span></span><br><span class="line"><span class="built_in">require</span>.cookie         <span class="comment">//访问cookies；需要中间件cookie-parser</span></span><br><span class="line"><span class="built_in">require</span>.signeCookies         <span class="comment">//访问已签名的cookie；需要中间件cookie-parser</span></span><br><span class="line"><span class="built_in">require</span>.body         <span class="comment">//读取有效负载信息，需要中间件body-parser</span></span><br></pre></td></tr></table></figure>
+<h1 id="访问请求头信息"><a href="#访问请求头信息" class="headerlink" title="访问请求头信息"></a>访问请求头信息</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.get(headerKey)                    <span class="comment">//读取headerkey对应值</span></span><br><span class="line"><span class="built_in">require</span>.accepts(type)                     <span class="comment">//检查类型是否可以接受</span></span><br><span class="line"><span class="built_in">require</span>.acceptsLanguage(language)         <span class="comment">//检查语言</span></span><br><span class="line"><span class="built_in">require</span>.acceptsCharset(charset)           <span class="comment">//检查字符集</span></span><br><span class="line"><span class="built_in">require</span>.is(type)                          <span class="comment">//检查类型</span></span><br><span class="line"><span class="built_in">require</span>.ip                                <span class="comment">//读取一个IP地址</span></span><br><span class="line"><span class="built_in">require</span>.ips                               <span class="comment">//读取IP地址（使用trust-proxy）</span></span><br><span class="line"><span class="built_in">require</span>.path                              <span class="comment">//读取URL路径</span></span><br><span class="line"><span class="built_in">require</span>.host                              <span class="comment">//访问主机名，不含端口</span></span><br><span class="line"><span class="built_in">require</span>.fresh                             <span class="comment">//检查请求是否是刷新</span></span><br><span class="line"><span class="built_in">require</span>.stale                             <span class="comment">//检查请求是否是旧的</span></span><br><span class="line"><span class="built_in">require</span>.xhr                               <span class="comment">//检查XHR/AJAX-y请求</span></span><br><span class="line"><span class="built_in">require</span>.protocol                          <span class="comment">//返回HTTP协议</span></span><br><span class="line"><span class="built_in">require</span>.secure                            <span class="comment">//检查协议是否为https</span></span><br><span class="line"><span class="built_in">require</span>.subdomains                        <span class="comment">//读取子域名数组</span></span><br><span class="line"><span class="built_in">require</span>.originalUrl                       <span class="comment">//读取原始url</span></span><br></pre></td></tr></table></figure>
+<h1 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">response.redirect(status, url)                    <span class="comment">//重定向请求</span></span><br><span class="line">response.send(status, data)                       <span class="comment">//发送响应</span></span><br><span class="line">response.json(status, data)                       <span class="comment">//发送JSON格式数据，并强制正确的头信息</span></span><br><span class="line">response.sendfile(path, options, callback)        <span class="comment">//发送文件</span></span><br><span class="line">response.rander(templateName, lacals, callback)   <span class="comment">//渲染模版文件</span></span><br><span class="line">response.locals                                   <span class="comment">//将数据传递给模版</span></span><br></pre></td></tr></table></figure>
+<h1 id="处理程序签名"><a href="#处理程序签名" class="headerlink" title="处理程序签名"></a>处理程序签名</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">require, response, next</span>)                 //请求处理程序签名</span></span><br><span class="line"><span class="function"><span class="title">function</span>(<span class="params">error, require, response, next</span>)          //错误处理程序签名</span></span><br></pre></td></tr></table></figure>
+<h1 id="Stylus-和-Jade-ejs"><a href="#Stylus-和-Jade-ejs" class="headerlink" title="Stylus 和 Jade ejs"></a>Stylus 和 Jade ejs</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm I -D stylus jade ejs          <span class="comment">#安装stylus jade ejs</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 应用模版引擎</span></span><br><span class="line">app.set(<span class="string">'view'</span>, path.__join(__dirname, <span class="string">'views'</span>));</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'jade'</span>));</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>));</span><br><span class="line"><span class="comment">// 应用stylus css处理器</span></span><br><span class="line">app.use(<span class="built_in">require</span>(<span class="string">'stylus'</span>).middleware(path.join(__dirname, <span class="string">'public'</span>)))</span><br></pre></td></tr></table></figure>
+<h1 id="Body"><a href="#Body" class="headerlink" title="Body"></a>Body</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line">app.use(bodyParser.urlencoded(&#123;</span><br><span class="line">  extended: <span class="literal">true</span>;</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+<h1 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(express.static(path.join(__dirname, <span class="string">'public'</span>)));</span><br></pre></td></tr></table></figure>
+<h1 id="连接中间件"><a href="#连接中间件" class="headerlink" title="连接中间件"></a>连接中间件</h1><ul>
+<li><a href="http://github.com/expressjs/body-parser" target="_blank" rel="noopener">body-parser</a>           访问请求负载</li>
+<li><a href="http://github.com/expressjs/compression" target="_blank" rel="noopener">compression</a>           使用Gzip压缩</li>
+<li><a href="http://github.com/expressjs/connect-timeout" target="_blank" rel="noopener">connect-timeout</a>       在指定时间后关闭请求</li>
+<li><a href="http://github.com/expressjs/cookie-pareser" target="_blank" rel="noopener">cookie-pareser</a>        解析和读取cookie</li>
+<li><a href="http://github.com/expressjs/cookie-session" target="_blank" rel="noopener">cookie-session</a>        使用cookie 存储session值</li>
+<li><a href="http://github.com/expressjs/csurf" target="_blank" rel="noopener">csurf</a>                 跨域站点请求 伪造（Cross-Site Request Forgery CSRF)令牌</li>
+<li><a href="http://github.com/expressjs/errorhandler" target="_blank" rel="noopener">errorhandler</a>          开发环境使用的错误处理程序</li>
+<li><a href="http://github.com/expressjs/express-session" target="_blank" rel="noopener">express-session</a>       请求内存或其他方法来存储会话</li>
+<li><a href="http://github.com/expressjs/method-override" target="_blank" rel="noopener">method-override</a>       覆盖HTTP方法</li>
+<li><a href="http://github.com/expressjs/morgan" target="_blank" rel="noopener">morgan</a>                输出服务器日志</li>
+<li><a href="http://github.com/expressjs/resqonse-time" target="_blank" rel="noopener">resqonse-time</a>         显示响应时间</li>
+<li><a href="http://github.com/expressjs/serve-favicon" target="_blank" rel="noopener">serve-favicon</a>         提供一个favicon</li>
+<li><a href="http://github.com/expressjs/serve-index" target="_blank" rel="noopener">serve-index</a>           提供文件目录作为文件服务器</li>
+<li><a href="http://github.com/expressjs/serve-static" target="_blank" rel="noopener">serve-static</a>          静态资源服务</li>
+<li><a href="http://github.com/expressjs/vhost" target="_blank" rel="noopener">vhost</a>                  使用虚拟主机</li>
+</ul>
+<h1 id="其他流行中间件"><a href="#其他流行中间件" class="headerlink" title="其他流行中间件"></a>其他流行中间件</h1><ul>
+<li><a href="http://github.com/jed/cookies" target="_blank" rel="noopener">cookies</a>                  解析cookie(类似body-parser)</li>
+<li><a href="http://github.com/jed/keygrip" target="_blank" rel="noopener">keygrip</a>                  解析cookie(类似body-parser)</li>
+<li><a href="http://github.com/stream-utils/raw-body" target="_blank" rel="noopener">raw-body</a> 使用原始的payload/body</li>
+<li><a href="http://github.com/superjoe30/connect-multiparty" target="_blank" rel="noopener">connect-multiparty</a> 处理上传文件</li>
+<li><a href="http://github.com/ljharb/qs" target="_blank" rel="noopener">qs</a> 解析以对象/数组作为值的查询字符串</li>
+<li><a href="http://github.com/isaacs/st" target="_blank" rel="noopener">st</a> 静态文件服务（类似staticCache）</li>
+<li><a href="http://github.com/andrewrk/connect-static" target="_blank" rel="noopener">connect-static</a> 静态文件服务（类似staticCache）</li>
+<li><a href="http://github.com/ctavan/express-validator" target="_blank" rel="noopener">express-validator</a> 执行表单验证</li>
+<li><a href="http://github.com/emberfeather/less.js-middkeware" target="_blank" rel="noopener">less</a> less文件转换</li>
+<li><a href="http://github.com/jed/keygrip" target="_blank" rel="noopener">passport</a> 验证请求</li>
+<li><a href="http://github.com/jed/keygrip" target="_blank" rel="noopener">helmet</a> 设置安全头</li>
+<li><a href="http://github.com/jed/keygrip" target="_blank" rel="noopener">connect-cors</a> 启用跨越资源共享（Cross-Site Request Forgery CSRF)</li>
+<li><a href="http://github.com/jed/keygrip" target="_blank" rel="noopener">connect-redis</a> 连接redis</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci data-cs data-r data-o data-a data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- baidu Analytics -->
+  <script type="text/javascript">
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4ff5aa3a94efe364858be83f4411eba9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- End baidu Analytics -->
+  
+</html>
